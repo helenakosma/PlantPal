@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 use std::{collections::HashMap, fs, path::PathBuf};
 
 #[derive(Parser)]
-#[command(name = "plantwatch", about = "Track your houseplants 🌱")]
+#[command(name = "plantpal", about = "Track your houseplants 🌱")]
 struct Cli {
     #[command(subcommand)]
     command: Commands,
