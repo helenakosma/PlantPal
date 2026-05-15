@@ -1,5 +1,7 @@
 # PlantPal 🌱
 
+![PlantPal](PlantPal.png)
+
 Made with love for my sister, who has a passion for flowers and plants.
 
 A CLI tool for tracking your houseplants. Log waterings, check what's overdue, and get weather-aware reminders for outdoor plants.
