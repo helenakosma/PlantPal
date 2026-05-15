@@ -1,6 +1,6 @@
 # PlantPal 🌱
 
-![PlantPal](PlantPal.png)
+<img src="PlantPal.png" width="150"/>
 
 Made with love for my sister, who has a passion for flowers and plants.
 
