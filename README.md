@@ -11,7 +11,8 @@ A CLI tool for tracking your houseplants. Log waterings, check what's overdue, a
 Make sure you have [Rust installed](https://rustup.rs), then:
 
 ```powershell
-cd C:\Planted\Planted!
+git clone https://github.com/your-username/plantpal
+cd plantpal
 cargo build --release
 ```
 
