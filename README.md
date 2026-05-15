@@ -11,30 +11,30 @@ cd C:\Planted\Planted!
 cargo build --release
 ```
 
-The binary will be at `target/release/plantwatch.exe`. You can copy it anywhere on your PATH to use it as a real command.
+The binary will be at `target/release/plantpal.exe`. You can copy it anywhere on your PATH to use it as a real command.
 
-During development, use `cargo run --` in place of `plantwatch`.
+During development, use `cargo run --` in place of `plantpal`.
 
 ## Commands
 
 ### Add a plant
 
 ```
-plantwatch add <name> --every <days>
-plantwatch add <name> --every <days> --indoor
+plantpal add <name> --every <days>
+plantpal add <name> --every <days> --indoor
 ```
 
 Outdoor is the default. Use `--indoor` for plants that live inside.
 
 ```
-plantwatch add Monstera --every 7 --indoor
-plantwatch add Rose --every 3
+plantpal add Monstera --every 7 --indoor
+plantpal add Rose --every 3
 ```
 
 ### Log a watering
 
 ```
-plantwatch water <name>
+plantpal water <name>
 ```
 
 Records today's date in the plant's watering history.
@@ -42,7 +42,7 @@ Records today's date in the plant's watering history.
 ### Check status
 
 ```
-plantwatch status
+plantpal status
 ```
 
 Shows all active plants with their watering frequency, last watered date, and whether they are overdue. If a location is configured and it rained enough today, outdoor plants that are overdue will suggest skipping instead.
@@ -50,7 +50,7 @@ Shows all active plants with their watering frequency, last watered date, and wh
 ### List plants
 
 ```
-plantwatch list
+plantpal list
 ```
 
 Simple list of all active plant names.
@@ -58,7 +58,7 @@ Simple list of all active plant names.
 ### View watering history
 
 ```
-plantwatch log <name>
+plantpal log <name>
 ```
 
 Shows every recorded watering date for a plant, newest first.
@@ -66,8 +66,8 @@ Shows every recorded watering date for a plant, newest first.
 ### Discard a plant
 
 ```
-plantwatch discard <name>
-plantwatch discard <name> --cause "dried out"
+plantpal discard <name>
+plantpal discard <name> --cause "dried out"
 ```
 
 Moves the plant to the graveyard with an optional cause. The full watering history is preserved.
@@ -75,7 +75,7 @@ Moves the plant to the graveyard with an optional cause. The full watering histo
 ### View the graveyard
 
 ```
-plantwatch graveyard
+plantpal graveyard
 ```
 
 Shows all discarded plants with their discard date, cause, and total number of waterings.
@@ -83,13 +83,13 @@ Shows all discarded plants with their discard date, cause, and total number of w
 ### Set your location
 
 ```
-plantwatch setup --lat <latitude> --lon <longitude>
+plantpal setup --lat <latitude> --lon <longitude>
 ```
 
 Stores your coordinates so `status` can check live rainfall data from [Open-Meteo](https://open-meteo.com). No API key required.
 
 ```
-plantwatch setup --lat 43.7 --lon -79.4
+plantpal setup --lat 43.7 --lon -79.4
 ```
 
 ## Weather Integration
@@ -104,7 +104,7 @@ Indoor plants are never affected by weather since rain outside does not help the
 
 ## Data Storage
 
-All plant data is saved to `~/.plantwatch.json`. It persists between runs and stores:
+All plant data is saved to `~/.plantpal.json`. It persists between runs and stores:
 
 - Active plants (name, frequency, indoor/outdoor flag, full watering log)
 - Discarded plants (same as above, plus discard date and cause)
