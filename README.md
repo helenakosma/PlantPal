@@ -109,7 +109,7 @@ Indoor plants are never affected by weather since rain outside does not help the
 
 ## Data Storage
 
-All plant data is saved to `~/.plantpal.json`. It persists between runs and stores:
+All plant data is saved to `~/.plantwatch.json`. It persists between runs and stores:
 
 - Active plants (name, frequency, indoor/outdoor flag, full watering log)
 - Discarded plants (same as above, plus discard date and cause)

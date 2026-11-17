@@ -216,7 +216,7 @@ fn main() {
 
         Commands::Status => {
             if garden.active.is_empty() {
-                println!("Your garden is empty. Add a plant with `plantwatch add <name> --every <days>`.");
+                println!("Your garden is empty. Add a plant with `plantpal add <name> --every <days>`.");
                 return;
             }
 
